@@ -184,7 +184,7 @@
 				if (!sameOrigin) return true;
 				if (!response) return false;
 				if (response.type === 'opaque') return true;
-				return response.status > 0 && response.status < 500;
+				return response.status > 0 && response.status < 300;
 			};
 
 			if (typeof AbortController === 'undefined') {
