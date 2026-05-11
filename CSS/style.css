@@ -1,0 +1,211 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+#app {
+  position: relative;
+  width: min(100vw, calc(100vh * 16 / 10));
+  height: min(100vh, calc(100vw * 10 / 16));
+  max-width: 2944px;
+  max-height: 1840px;
+}
+
+.app-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 22px);
+  padding: 4vw;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.4;
+  font-size: clamp(16px, 2.2vw, 34px);
+  color: #fff;
+}
+
+.app-message-title {
+  font-size: clamp(20px, 3vw, 52px);
+  font-weight: 600;
+}
+
+.app-message-sub {
+  font-size: clamp(14px, 1.8vw, 28px);
+  opacity: 0.85;
+}
+
+.app-faq {
+  width: min(100%, 1100px);
+  text-align: left;
+  font-size: clamp(14px, 1.7vw, 26px);
+  line-height: 1.5;
+}
+
+.app-faq-title {
+  font-weight: 600;
+  margin-bottom: clamp(8px, 1.2vw, 14px);
+}
+
+.app-faq-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.app-faq-item {
+  margin: 0 0 clamp(8px, 1.2vw, 14px) 0;
+}
+
+.app-faq-en {
+  opacity: 0.85;
+}
+
+.app-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.fullscreen-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fullscreen-btn:active {
+  transform: translateY(1px);
+}
+
+.refresh-btn {
+  bottom: 68px;
+}
+.iot-config-panel {
+  width: min(90%, 600px);
+  margin: clamp(12px, 2vw, 20px) auto 0;
+  padding: clamp(12px, 2vw, 20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.2vw, 14px);
+}
+
+.iot-config-hidden {
+  display: none;
+}
+
+.iot-config-title {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.iot-config-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  color: #fff;
+  font-size: clamp(14px, 1.6vw, 22px);
+}
+
+.iot-config-row > span {
+  white-space: nowrap;
+}
+
+.iot-config-input {
+  flex: 1;
+  min-width: 0;
+  padding: clamp(6px, 1vw, 10px) clamp(8px, 1.2vw, 14px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: clamp(14px, 1.6vw, 22px);
+  outline: none;
+}
+
+.iot-config-input-port {
+  flex: 0 0 auto;
+  width: clamp(90px, 14vw, 150px);
+}
+
+.iot-config-input:focus {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.iot-config-input:disabled {
+  opacity: 0.5;
+}
+
+.iot-config-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.iot-config-btn {
+  padding: clamp(6px, 1vw, 10px) clamp(16px, 2vw, 28px);
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: clamp(14px, 1.6vw, 22px);
+  cursor: pointer;
+}
+
+.iot-config-btn:active {
+  transform: translateY(1px);
+}
+
+.iot-config-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.iot-config-btn-cancel {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.iot-config-msg {
+  text-align: center;
+  font-size: clamp(12px, 1.4vw, 18px);
+  min-height: 1.2em;
+}
+
+.iot-config-success {
+  color: #4caf50;
+}
+
+.iot-config-error {
+  color: #f44336;
+}
